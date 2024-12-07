@@ -5,7 +5,7 @@ window.requestAnimFrame = function () {
         window.mozRequestAnimationFrame ||
         window.oRequestAnimationFrame ||
         function (callback) {
-            window.setTimeout(callback, 1000 / 60); // Fallback to 60 FPS
+            window.setTimeout(callback, 1000 / 60); 
         }
     );
 }();
@@ -28,11 +28,11 @@ window.onload = function () {
         h = (canvas.height = window.innerHeight),
         mouse = { x: false, y: false },
         last_mouse = {},
-        maxl = 400, // Maximum length of a tentacle
-        minl = 150,  // Minimum length of a tentacle
-        n = 30,     // Number of segments in each tentacle
-        numt = 150,  // Number of tentacles
-        tent = [],  // Array to store tentacles
+        maxl = 400, 
+        minl = 150, 
+        n = 30,     
+        numt = 150,  
+        tent = [],  
         clicked = false,
         target = { x: w / 2, y: h / 2 },
         last_target = { x: w / 2, y: h / 2 },
@@ -41,8 +41,8 @@ window.onload = function () {
     class Segment {
         constructor(parent, l, a, first) {
             this.first = first;
-            this.l = l; // Length of the segment
-            this.ang = a; // Angle of the segment
+            this.l = l; 
+            this.ang = a; 
             if (first) {
                 this.pos = { x: parent.x, y: parent.y };
             } else {
